@@ -51,10 +51,12 @@ body{
   /**background-color: #cadab6;**/
   /**box-shadow:0 4px 10px 5px #cadab6;**/
 }
-
+#link-container > a{
+  margin:auto 0 auto 0;
+}
 .navlink{
   padding:var(--main-padding);
-  margin:auto 0 auto 0;
+
   border-bottom:3px solid rgba(255,255,255,0);
   transition: all 0.1s;
 }
@@ -65,13 +67,13 @@ body{
   display:flex;
 }
 #first-link{
-  margin-left:auto;
+  margin-left:auto !important;
 }
 
 #title{
   padding:var(--main-padding);
   padding-right: 10px;
-  margin:auto 0 auto 0;
+  margin:auto;
   width:auto;
   text-align:center;
   cursor:default;
@@ -89,8 +91,8 @@ body{
 
 #title > img{
   width:auto;
-  height:40px;
-  margin: 0;
+  height:50px;
+  margin: auto;
 }
 
 #link-container > a{
@@ -189,53 +191,22 @@ body{
 }
 
   #last-link{
-    margin-right:15px;
+    margin-right:15px !important;
   }
 
   #navbar{
     background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
     background-position: top;
     background-size: 100vw 100vh;
+    top:-1px;
+    height: auto;
+    padding-top:0;
+    padding-bottom:0;
   }
   #about{
     background-color: transparent;
   }
 
-  .navlink{
-    display: none;
-  }
 
-  .container {
-    display: inline-block;
-    cursor: pointer;
-    z-index: 4;
-    margin:auto;
-    margin-left: auto;
-    margin-right: 35px;
-  }
 
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: var(--main-dark-color);
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-
-  /* Rotate first bar */
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-  }
-
-  /* Fade out the second bar */
-  .change .bar2 {
-    opacity: 0;
-  }
-
-  /* Rotate last bar */
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-  }
 }
