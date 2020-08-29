@@ -2,28 +2,51 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Waldo's Portfolio</title>
     <link rel="stylesheet" href="styles/index.css">
   </head>
   <body>
+    <script type="text/javascript">
+    function myFunction(x) {
+x.classList.toggle("change");
+}
+    </script>
   <header>
     <nav id="navbar">
       <div id="link-container">
         <div id="title"> <img src="https://drive.google.com/uc?export=download&id=1F-EQl3JdlxpmBefV24vJyiInaOxfbDFM" alt="LOGO"></div>
         <div id="name">Waldo<br>Rodríguez</div>
-        <a class="navlink" id="first-link" href="#about">About</a>
+        <a class="navlink" id="first-link" href="#motto">Motto</a>
+        <a class="navlink" href="#about">About Me</a>
         <a class="navlink" href="#projects">Projects</a>
         <a class="navlink" id="last-link" href="#contact">Contact</a>
+        <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
        </div>
     </nav>
   </header>
   <main>
-    <section id="about">
+    <section id="motto">
       <p id="paragraph-1">Simplicity</p>
       <p id="paragraph-2">is the key to</p>
       <p id="paragraph-3">beautiful web interfaces</p>
     </section>
   </main>
-  <footer id="contact"></footer>
+  <footer id="contact">
+    <h2>Find me on:</h2>
+      <a id="profile-link" href="https://github.com/shin1code" target="_blank">
+        <img class="social-media-icon" src="https://drive.google.com/uc?export=download&id=1NkDxeSdRwzRVw_tsDw--1bj5dVHRtjXM"><div>GitHub</div>
+      </a>
+      <a id="profile-link-2" href="https://www.freecodecamp.org/shin1code" target="_blank">
+        <img class="social-media-icon" src="https://drive.google.com/uc?export=download&id=160m1FCsfjIbnpeteJT0AazFEpVpegxkm"><div>freeCodeCamp</div>
+      </a>
+      <a id="profile-link-3" href="https://www.twitter.com/shin1code" target="_blank">
+        <img class="social-media-icon" src="img/twitter.png"><div>Twitter</div>
+      </a>
+    </footer>
   </body>
 </html>

@@ -1,6 +1,13 @@
 /**main styles**/
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=PT+Sans:wght@400;700&family=Roboto+Condensed:wght@300;700&family=Shadows+Into+Light&family=Oswald:wght@200;300;400;700&display=swap');
 
+
+/******Menu icon*******/
+.container {
+  display: none;
+}
+/**********Menu icon finish************/
+
 :root{
   --main-padding: 10px 40px;
   --main-text-color:rgba(0,0,0,.5);
@@ -9,6 +16,7 @@
   --font-3: 'Kaushan Script', cursive;
   --font-4: 'Shadows Into Light', cursive;
   --font-5: 'Oswald', sans-serif;
+  --main-dark-color:#616974;
 }
 ::selection{
   background: rgba(97, 105, 116, .2);
@@ -23,12 +31,11 @@ body{
   font-weight: 400;
   background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
   background-position: top;
-  background-size: 100vw 100vh;
+  background-size: 100% 100%;
   background-attachment: fixed;
 }
 
 #navbar{
-  /**background-color: none;**/
   background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
   background-position: top;
   background-size: 100vw 100vh;
@@ -100,11 +107,7 @@ body{
   color:var(--main-text-color);
 }**/
 
-#about{
-  /**background-image: url('https://drive.google.com/uc?export=download&id=11GYnIHQnYOwv2Mbo_ZGwqEJLErvDdiYP');
-  background-position: center;
-  background-size: cover;**/
-  /**background: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);**/
+#motto{
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -118,11 +121,13 @@ body{
   font-weight:400;
 }
 
-#about > p{
-  color:#616974;
+#motto > p{
+  color:var(--main-dark-color);
   text-align: center;
 }
-
+#paragraph-1, #paragraph-2, #paragraph-3{
+  padding: 0;
+}
 #paragraph-1{
   font-family: var(--font-5);
   font-size:100px;
@@ -144,15 +149,43 @@ body{
 }
 #contact{
   background-color: rgba(97, 105, 116, 1);
-  height:30vh;
+  height:auto;
+  text-align:center;
+  padding:50px 0;
+  width:100%;
 }
+
+#contact > a{
+  color:#fff;
+  display:inline-block;
+  margin:0 10px;
+  text-decoration:none;
+  transition:all 0.1s;
+}
+
+#contact > a:hover{
+  transfrom-origin:50%;
+  transform:scale(0.9);
+  text-shadow:0 0 3px #000;
+}
+.social-media-icon{
+  width:auto;
+  height:50px;
+}
+
+h2{color:#fff;margin:0 0 20px 0;font-weight:200;}
+
+
 @media (max-width:600px){
   :root{
     --main-padding: 10px 15px;
 }
 
 body{
-  background-image: linear-gradient(to bottom, #a4bcd4, #e6e5e0);
+  background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
+  background-position: top;
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 
   #last-link{
@@ -160,11 +193,49 @@ body{
   }
 
   #navbar{
-    background-image: linear-gradient(to bottom, #a4bcd4, #e6e5e0);
+    background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
     background-position: top;
     background-size: 100vw 100vh;
   }
   #about{
     background-color: transparent;
+  }
+
+  .navlink{
+    display: none;
+  }
+
+  .container {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 4;
+    margin:auto;
+    margin-left: auto;
+    margin-right: 35px;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--main-dark-color);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
   }
 }
