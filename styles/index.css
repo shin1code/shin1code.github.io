@@ -34,7 +34,24 @@ body{
   background-size: 100% 100%;
   background-attachment: fixed;
 }
-
+#header{
+  background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
+  background-position: top;
+  background-size: 100vw 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.nav-bar a{
+  color:var(--main-text-color);
+  text-decoration: none;
+  margin-right: 30px;
+}
 #navbar{
   background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
   background-position: top;
