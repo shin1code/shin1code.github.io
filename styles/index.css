@@ -9,7 +9,7 @@
 /**********Menu icon finish************/
 
 :root{
-  --main-padding: 10px 40px;
+  --main-padding: 5px 10px;
   --main-text-color:rgba(0,0,0,.5);
   --font-1: 'PT Sans', sans-serif;
   --font-2: 'Roboto Condensed', sans-serif;
@@ -35,22 +35,37 @@ body{
   background-attachment: fixed;
 }
 #header{
+  margin: 0;
+}
+#header-container{
   background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
   background-position: top;
   background-size: 100vw 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
+  max-width:1200px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 10px auto;
+  padding-top: 10px;
 }
 .nav-bar a{
   color:var(--main-text-color);
   text-decoration: none;
   margin-right: 30px;
+  padding:var(--main-padding);
+  border-bottom:3px solid rgba(255,255,255,0);
+}
+.nav-bar a:last-of-type{
+  margin-right:0;
+}
+.nav-bar a:hover{
+  border-bottom:3px solid rgba(255,255,255,.8);
 }
 #navbar{
   background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
@@ -106,9 +121,9 @@ body{
   font-size:20px;
 }
 
-#title > img{
+#logo > img{
   width:auto;
-  height:50px;
+  height:45px;
   margin: auto;
 }
 
@@ -197,7 +212,7 @@ h2{color:#fff;margin:0 0 20px 0;font-weight:200;}
 
 @media (max-width:600px){
   :root{
-    --main-padding: 10px 15px;
+    --main-padding: 5px 15px;
 }
 
 body{
