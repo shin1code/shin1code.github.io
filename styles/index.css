@@ -1,13 +1,6 @@
 /**main styles**/
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=PT+Sans:wght@400;700&family=Roboto+Condensed:wght@300;700&family=Shadows+Into+Light&family=Oswald:wght@200;300;400;700&display=swap');
 
-
-/******Menu icon*******/
-.container {
-  display: none;
-}
-/**********Menu icon finish************/
-
 :root{
   --main-padding: 5px 10px;
   --main-text-color:rgba(0,0,0,.5);
@@ -23,85 +16,80 @@
 }
 html{
   scroll-behavior: smooth;
+  font-size: 62.5%;
+  color: var(--main-text-color);
 }
 body{
   padding: 0;
   margin: 0;
   font-family: var(--font-1);
   font-weight: 400;
+
+}
+#header{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 50rem;
+  height:100vh;
   background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
   background-position: top;
   background-size: 100% 100%;
   background-attachment: fixed;
 }
-#header{
-  margin: 0;
+.container{
+  width:1200px;
+  margin: 0 auto;
 }
-#header-container{
-  background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
-  background-position: top;
-  background-size: 100vw 100vh;
+#test{
+  background: red;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
-  max-width:1200px;
+  background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
+  background-position: top;
+  background-size: 100vw 100vh;
+}
+.header{
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto 10px auto;
-  padding-top: 10px;
+  margin: 0 auto 0 auto;
+  padding: 10px 0 10px 0;
 }
 .nav-bar a{
   color:var(--main-text-color);
   text-decoration: none;
-  margin-right: 30px;
+  margin-right: 3rem;
   padding:var(--main-padding);
-  border-bottom:3px solid rgba(255,255,255,0);
+  border-bottom:0.3rem solid rgba(255,255,255,0);
+  font-size: 1.6rem;
+  transition: all 0.1s;
 }
 .nav-bar a:last-of-type{
   margin-right:0;
 }
 .nav-bar a:hover{
-  border-bottom:3px solid rgba(255,255,255,.8);
+  border-bottom:0.3rem solid rgba(255,255,255,.8);
 }
-#navbar{
-  background-image: linear-gradient(to right bottom, #a4bcd4, #e6e5e0);
-  background-position: top;
-  background-size: 100vw 100vh;
-  position:fixed;
-  top:0px;
-  left:0px;
-  right:0px;
-  width:100vw;
-  height:auto;
-  padding:0;
-  color:rgba(0,0,0,.6);
-  z-index:2;
-  /**background-color: #cadab6;**/
-  /**box-shadow:0 4px 10px 5px #cadab6;**/
+h1{
+  font-family: var(--font-5);
+  font-weight: 200;
+  color:var(--main-text-color);
+  font-size: 8rem;
+  text-align: center;
 }
-#link-container > a{
-  margin:auto 0 auto 0;
+h1 > span{
+  display:block;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
-.navlink{
-  padding:var(--main-padding);
-
-  border-bottom:3px solid rgba(255,255,255,0);
-  transition: all 0.1s;
-}
-.navlink:hover{
-  border-bottom:3px solid rgba(255,255,255,.8);
-}
-#link-container{
-  display:flex;
-}
-#first-link{
-  margin-left:auto !important;
-}
-
 #title{
   padding:var(--main-padding);
   padding-right: 10px;
@@ -126,20 +114,6 @@ body{
   height:45px;
   margin: auto;
 }
-
-#link-container > a{
-  text-decoration:none;
-  color:var(--main-text-color);
-}
-/**#link-container > a:before{
-  content:'#';
-  color:transparent;
-  font-size:12px;
-}
-#link-container > a:hover:before{
-  content:'#';
-  color:var(--main-text-color);
-}**/
 
 #motto{
   height: 100vh;
@@ -181,6 +155,11 @@ body{
   margin:0;
   font-weight: 400;
 }
+
+#about-me{
+  height: 100vh;
+}
+
 #contact{
   background-color: rgba(97, 105, 116, 1);
   height:auto;
@@ -207,7 +186,7 @@ body{
   height:50px;
 }
 
-h2{color:#fff;margin:0 0 20px 0;font-weight:200;}
+.social-media-heading{color:#fff;margin:0 0 20px 0;font-weight:200;}
 
 
 @media (max-width:600px){
